@@ -1,0 +1,52 @@
+.app-sidebar {
+  width: 280px;
+}
+
+.nav-item-list {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  border-style: none;
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 3px;
+  text-decoration: none;
+  color: white;
+  padding: 6px;
+
+  .nav-item-icon {
+    margin-right: 10px;
+  }
+
+  &.active {
+    background-color: #528de6;
+    padding: 5px;
+    color: black;
+  }
+}
+
+// ::ng-deep .mat-nav-list .mat-list-item span {
+//   /* Your styles here */
+//   padding: 10px;
+//   margin: 0px 10px;
+// }
+// ::ng-deep .mat-nav-list .mat-list-item.active span {
+//   /* Your styles here */
+//   color: white !important;
+//   background-color: #293a7d;
+//   padding: 10px;
+//   border-radius: 15px;
+// }
+// ::ng-deep .mat-nav-list .mat-list-item.active span span {
+//   /* Your styles here */
+//   color: white !important;
+// }
+
+.sidenav-content {
+  padding: 20px;
+}

@@ -1,0 +1,30 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" [opened]="false" class="app-sidebar">
+    <!-- Sidenav content -->
+    <!-- <mat-nav-list class="mat-nav-list"> -->
+    <div class="nav-item-list">
+      <a class="nav-item" routerLink="/dashboard" routerLinkActive="active"
+        ><mat-icon class="nav-item-icon">dashboard</mat-icon>Dashboard</a
+      >
+      <a class="nav-item" routerLink="/workshops" routerLinkActive="active"
+        ><mat-icon class="nav-item-icon">work_outline</mat-icon>Workshops</a
+      >
+      <a class="nav-item" routerLink="/users" routerLinkActive="active"
+        ><mat-icon class="nav-item-icon">people</mat-icon>Users</a
+      >
+      <a class="nav-item" routerLink="/certificates" routerLinkActive="active"
+        ><mat-icon class="nav-item-icon">card_membership</mat-icon
+        >Certificates</a
+      >
+    </div>
+    <!-- Add other links here -->
+    <!-- </mat-nav-list> -->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+    <div class="sidenav-content">
+      <ng-content></ng-content>
+    </div>
+    <!-- Main content will be projected here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
