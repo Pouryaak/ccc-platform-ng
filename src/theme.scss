@@ -1,45 +1,11 @@
 @use "@angular/material" as mat;
 
-// Define the custom color palettes
-$custom-primary: (
-  50: #0c0f16,
-  100: #151e2e,
-  200: #1e2b3e,
-  300: #27384e,
-  400: #30455e,
-  500: #39526e,
-  600: #425f7e,
-  700: #4b6c8e,
-  800: #54799e,
-  900: #5d86ae,
-  A100: #85ec5a,
-  A200: #85ec5a,
-  A400: #85ec5a,
-  A700: #85ec5a,
-  contrast: (
-    50: #ffffff,
-    100: #ffffff,
-    200: #ffffff,
-    300: #ffffff,
-    400: #ffffff,
-    500: #ffffff,
-    600: #000000,
-    700: #000000,
-    800: #000000,
-    900: #000000,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
-);
-
 $custom-dark-primary: mat.define-palette(
   mat.$grey-palette,
   200
 ); // Or any dark shade you prefer
 $custom-dark-accent: mat.define-palette(
-  mat.$cyan-palette,
+  mat.$blue-palette,
   A200,
   A100,
   A400
@@ -66,4 +32,13 @@ $custom-theme: mat.define-dark-theme(
 
 .light-bg {
   background-color: #151e2e;
+}
+
+.mat-button-accent,
+.mat-flat-button.mat-accent,
+.mdc-button--raised.mat-accent,
+.mat-stroked-button.mat-accent,
+.mat-fab.mat-accent,
+.mat-mini-fab.mat-accent {
+  color: black !important;
 }

@@ -1,0 +1,30 @@
+<div>
+  <app-flex-container
+    flexDirection="row"
+    justifyContent="space-between"
+    alignItems="center"
+    flexWrap="wrap"
+  >
+    <div>
+      <app-flex-container
+        flexDirection="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <button *ngIf="haveBack" mat-icon-button (click)="goBack()">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <h1 [ngStyle]="{ 'margin.px': '0' }">{{ title }}</h1>
+      </app-flex-container>
+    </div>
+    <button
+      *ngIf="buttonLabel"
+      mat-raised-button
+      color="accent"
+      (click)="onButtonClick.emit()"
+    >
+      {{ buttonLabel }}
+    </button>
+  </app-flex-container>
+  <hr class="divider" />
+</div>
